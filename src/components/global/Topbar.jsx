@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Topbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = ["Home", "Projects", "About"];
+
+  const menuVariants = {
+    closed: { opacity: 0, x: "100%" },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    closed: { opacity: 0, x: 50 },
+    open: { opacity: 1, x: 0 },
+  };
+
   return (
     <header className="fixed w-full z-50 bg-transparent">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -38,7 +57,9 @@ const Topbar = () => {
                     <motion.span
                       className="relative z-10 block"
                       whileHover={{
+
                         color: "#2196f3", // Tailwind's pink-500
+
                         transition: { duration: 0.2 },
                       }}
                     >
@@ -46,6 +67,7 @@ const Topbar = () => {
                     </motion.span>
                     <motion.span
                       className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
+
                       initial={{ scaleX: 0 }}
                       whileHover={{
                         scaleX: 1,
