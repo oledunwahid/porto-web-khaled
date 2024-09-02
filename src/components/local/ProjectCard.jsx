@@ -49,7 +49,7 @@ const ProjectCard = ({
                 <img
                   src={image}
                   alt={`${title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-96 object-contain"
                 />
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer"

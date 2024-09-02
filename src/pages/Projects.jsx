@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../components/local/ProjectCard";
+import Travmate from "../assets/image/Travmate.jpeg";
+import Travmate2 from "../assets/image/Travmate2.jpg";
+import Mercu from "../assets/image/mercu1.jpg";
+import Mercu2 from "../assets/image/mercu2.jpg";
 
 const Projects = () => {
   const allProjects = [
@@ -80,6 +84,36 @@ const Projects = () => {
       image: "/path/to/public-project-image.jpg",
       technologies: ["React", "Node.js", "MongoDB"],
       link: "https://example-public-project.com",
+      isInternal: false,
+    },
+    {
+      title: "Redesign University's Website ",
+      description:
+        "This is an example of a public project that would be visible and accessible to everyone.",
+      images: [Mercu, Mercu2],
+      technologies: [
+        "Figma",
+        "High Fidelity",
+        "User Interface",
+        "User Experience",
+      ],
+      link: "https://www.figma.com/proto/WK1BK14lTqKFiXlpif8S53/Project-Redesign-Website-Mercu?page-id=0%3A1&node-id=60-640&scaling=scale-down&content-scaling=fixed&starting-point-node-id=60%3A640&t=wV2R4aowxCjvJBym-1",
+      isUIUX: true,
+      isInternal: false,
+    },
+    {
+      title: "Travmate (Airbnb UI/UX Project)",
+      description:
+        "UI/UX design with Airbnb category. Prepare hotel services, planes, travel, recreation areas and all kinds of your needs. This project was created to adapt the current user interface with a user experience that makes it easier for users.",
+      images: [Travmate, Travmate2],
+      technologies: [
+        "Figma",
+        "High Fidelity",
+        "User Interface",
+        "User Experience",
+      ],
+      link: "https://www.figma.com/proto/JCUOF8bX1YGhuCiUOFntS5/Project?node-id=5-37&starting-point-node-id=5%3A2",
+      isUIUX: true,
       isInternal: false,
     },
     // You can add more public projects here if needed
