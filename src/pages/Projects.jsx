@@ -16,11 +16,12 @@ const Projects = () => {
     {
       title: "IT Support System",
       description:
-        "Submit your IT-related issues here. Our IT team will assist you as soon as possible. (Additional or RAM Replacement, Drive or Cloud storage request, Email, Printer, Scan, Software problems etc).",
-      image: "/path/to/it-support-image.jpg", // You'll need to replace this with an actual image path
+        "IT-related issues here. Our IT team will assist you as soon as possible. (Additional or RAM Replacement, Drive or Cloud storage request, Email, Printer, Scan, Software problems etc).",
+      image: "/path/to/it-support-image.jpg",
       technologies: ["IT", "Support"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "Building Maintenance",
@@ -30,6 +31,7 @@ const Projects = () => {
       technologies: ["Facilities", "Maintenance"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "Other Facilities Request",
@@ -39,6 +41,7 @@ const Projects = () => {
       technologies: ["Facilities", "Procurement"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "Laptop Facilities Request",
@@ -48,6 +51,7 @@ const Projects = () => {
       technologies: ["IT", "Hardware"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "ATK/Stationary",
@@ -57,6 +61,7 @@ const Projects = () => {
       technologies: ["Office Supplies"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "Delivery",
@@ -66,6 +71,7 @@ const Projects = () => {
       technologies: ["Logistics"],
       link: "",
       isInternal: true,
+      isWeb: true,
     },
     {
       title: "Public Project Example",
@@ -79,16 +85,20 @@ const Projects = () => {
     // You can add more public projects here if needed
   ];
 
-  const [filter, setFilter] = useState("All");
-  const categories = ["All", "Public", "Internal", "Web", "Mobile", "AI/ML"];
+  const [filter, setFilter] = useState("All Projects");
+  const categories = ["All Projects", "Public", "Internal", "Web", "UI/UX"];
 
   const filteredProjects =
-    filter === "All"
+    filter === "All Projects"
       ? allProjects
       : filter === "Public"
       ? allProjects.filter((project) => !project.isInternal)
       : filter === "Internal"
       ? allProjects.filter((project) => project.isInternal)
+      : filter === "Web"
+      ? allProjects.filter((project) => project.isWeb)
+      : filter === "UI/UX"
+      ? allProjects.filter((project) => project.isUIUX)
       : allProjects.filter((project) => project.technologies.includes(filter));
 
   return (
@@ -105,7 +115,7 @@ const Projects = () => {
             key={category}
             className={`mr-4 px-4 py-2 rounded-full ${
               filter === category
-                ? "bg-pink-500 text-white"
+                ? "bg-blue-500 text-white"
                 : "bg-gray-700 text-gray-300"
             }`}
             whileHover={{ scale: 1.05 }}
