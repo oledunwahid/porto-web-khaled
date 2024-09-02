@@ -1,7 +1,18 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-100, 100], [30, -30]);
+  const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+
+  const handleExplore = () => {
+    navigate("/projects");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -43,9 +54,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Hey, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">
-            Khaled
+          Hey, I&apos;m{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-200">
+            Khaled Makkawirelang
           </span>
         </motion.h1>
         <motion.p
@@ -54,15 +65,35 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          Full Stack Developer & Creative Coder
+          Full Stack Developer
         </motion.p>
-        <motion.button
-          className="bg-gradient-to-r from-pink-500 to-violet-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg transition duration-300"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+        <motion.div
+          style={{
+            perspective: 1000,
+          }}
         >
-          Explore My Work
-        </motion.button>
+          <motion.button
+            className="bg-gradient-to-r from-blue-500 to-violet-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg transition duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              rotateX: rotateX,
+              rotateY: rotateY,
+            }}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              x.set(e.clientX - rect.left - rect.width / 2);
+              y.set(e.clientY - rect.top - rect.height / 2);
+            }}
+            onMouseLeave={() => {
+              x.set(0);
+              y.set(0);
+            }}
+            onClick={handleExplore}
+          >
+            Explore My Work
+          </motion.button>
+        </motion.div>
       </div>
     </motion.div>
   );
