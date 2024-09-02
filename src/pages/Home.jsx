@@ -2,22 +2,27 @@ import React from "react";
 import { motion } from "framer-motion";
 import Hero from "../components/local/Hero";
 import ProjectCard from "../components/local/ProjectCard";
+import EIPImage1 from "../assets/image/eip.jpg";
+import EIPImage2 from "../assets/image/eip2.jpg";
+import CPMAAImage1 from "../assets/image/cpmaa.jpg";
+import CPMAAImage2 from "../assets/image/cpmaa2.jpg";
 
 const Home = () => {
   const featuredProjects = [
     {
-      title: "Project 1",
-      description: "A brief description of project 1",
-      image: "/path/to/project1-image.jpg",
-      technologies: ["React", "Node.js", "MongoDB"],
-      link: "https://project1.com",
+      title: "Employee Information Portal",
+      description:
+        "The Employee Information Portal is a comprehensive company application designed to meet various internal needs. It serves as a centralized platform for essential functions such as IT ticketing, procurement purchase requests, stationary requests, and more. This portal is tailored to address the specific requirements of internal resources, ensuring streamlined operations and efficient management of company processes.",
+      images: [EIPImage1, EIPImage2],
+      technologies: ["PHP", "MYSQL"],
+      isInternal: true,
     },
     {
-      title: "Project 2",
-      description: "A brief description of project 2",
-      image: "/path/to/project2-image.jpg",
-      technologies: ["Vue.js", "Express", "PostgreSQL"],
-      link: "https://project2.com",
+      title: "Company Profile Mineral Alam Abadi",
+      description: "Company Profile Mineral Alam Abadi",
+      images: [CPMAAImage1, CPMAAImage2],
+      technologies: ["PHP", "Javascript", "Bootstrap 5", "MYSQL", "CSS"],
+      link: "https://maagroup.co.id/",
     },
   ];
 

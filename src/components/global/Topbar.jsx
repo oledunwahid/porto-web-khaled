@@ -26,7 +26,7 @@ const Topbar = () => {
     <header className="fixed w-full z-50 bg-transparent">
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-white">
-          Khaled Logo
+          KM
         </Link>
         <motion.button
           className="text-white text-3xl z-50"
@@ -57,14 +57,17 @@ const Topbar = () => {
                     <motion.span
                       className="relative z-10 block"
                       whileHover={{
-                        color: "#ec4899", // Tailwind's pink-500
+
+                        color: "#2196f3", // Tailwind's pink-500
+
                         transition: { duration: 0.2 },
                       }}
                     >
                       {item}
                     </motion.span>
                     <motion.span
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500"
+                      className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
+
                       initial={{ scaleX: 0 }}
                       whileHover={{
                         scaleX: 1,
