@@ -49,13 +49,13 @@ const Hero = () => {
       </div>
       <div className="relative z-10 py-20 text-center">
         <motion.h1
-          className="text-6xl font-bold mb-4"
+          className="text-5xl lg:text-6xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
           Hey, I&apos;m{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-200">
+          <span className="text-transparent text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-blue-500 to-violet-200">
             Khaled Makkawirelang
           </span>
         </motion.h1>

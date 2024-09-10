@@ -5,6 +5,8 @@ import Travmate from "../assets/image/Travmate.jpeg";
 import Travmate2 from "../assets/image/Travmate2.jpg";
 import Mercu from "../assets/image/mercu1.jpg";
 import Mercu2 from "../assets/image/mercu2.jpg";
+import IT from "../assets/image/it.jpg";
+import IT2 from "../assets/image/it2.jpg";
 
 const Projects = () => {
   const allProjects = [
@@ -21,7 +23,7 @@ const Projects = () => {
       title: "IT Support System",
       description:
         "IT-related issues here. Our IT team will assist you as soon as possible. (Additional or RAM Replacement, Drive or Cloud storage request, Email, Printer, Scan, Software problems etc).",
-      image: "/path/to/it-support-image.jpg",
+      images: [IT, IT2],
       technologies: ["IT", "Support"],
       link: "",
       isInternal: true,
@@ -147,7 +149,7 @@ const Projects = () => {
         {categories.map((category) => (
           <motion.button
             key={category}
-            className={`mr-4 px-4 py-2 rounded-full ${
+            className={`mr-2 mt-2 px-6 py-2 lg:mr-4 lg:px-4   rounded-full ${
               filter === category
                 ? "bg-blue-500 text-white"
                 : "bg-gray-700 text-gray-300"
