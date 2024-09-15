@@ -36,6 +36,9 @@ import Proc1 from "../assets/image/proc1.jpg";
 import Proc2 from "../assets/image/proc2.jpg";
 import Career1 from "../assets/image/career1.jpg";
 import Career2 from "../assets/image/career2.jpg";
+import Sianti1 from "../assets/image/sianti1.jpg";
+import Sianti2 from "../assets/image/sianti2.jpg";
+import Sianti3 from "../assets/image/sianti3.jpg";
 
 const Projects = () => {
   const allProjects = [
@@ -187,6 +190,21 @@ const Projects = () => {
         "User Experience",
       ],
       link: "https://www.figma.com/proto/WK1BK14lTqKFiXlpif8S53/Project-Redesign-Website-Mercu",
+      isUIUX: true,
+      isInternal: false,
+    },
+    {
+      title: "SiANTI by KOMINFO UI/UX Design",
+      description:
+        "UI/UX design for a mobile application for monitoring companies in Indonesia, ensuring compliance with legal regulations and preventing illegal activities through radio spectrum device.",
+      images: [Sianti1, Sianti2, Sianti3],
+      technologies: [
+        "Figma",
+        "High Fidelity",
+        "User Interface",
+        "User Experience",
+      ],
+      link: "https://www.figma.com/proto/EOrwThI5NqBGnZLjmMznZg/SIANTI?page-id=0%3A1&node-id=215-711&node-type=canvas&viewport=592%2C582%2C0.12&t=FIWySQKIeGWC5wvD-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=215%3A700&show-proto-sidebar=1",
       isUIUX: true,
       isInternal: false,
     },
