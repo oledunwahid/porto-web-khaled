@@ -7,6 +7,35 @@ import Mercu from "../assets/image/mercu1.jpg";
 import Mercu2 from "../assets/image/mercu2.jpg";
 import IT from "../assets/image/it.jpg";
 import IT2 from "../assets/image/it2.jpg";
+import Building from "../assets/image/building.jpg";
+import Building2 from "../assets/image/building2.jpg";
+import Flora1 from "../assets/image/flora1.jpg";
+import Flora2 from "../assets/image/flora2.jpg";
+import PTSMS1 from "../assets/image/ptsms1.jpg";
+import PTSMS2 from "../assets/image/ptsms2.jpg";
+import PTSMS3 from "../assets/image/ptsms3.jpg";
+import CLA1 from "../assets/image/cla1.jpg";
+import CLA2 from "../assets/image/cla2.jpg";
+import Perfect1 from "../assets/image/perfect1.jpg";
+import Perfect2 from "../assets/image/perfect2.jpg";
+import Facilities1 from "../assets/image/facilities1.jpg";
+import Facilities2 from "../assets/image/facilities2.jpg";
+import Courier1 from "../assets/image/courier1.jpg";
+import Courier2 from "../assets/image/courier2.jpg";
+import ATK1 from "../assets/image/atk1.jpg";
+import ATK2 from "../assets/image/atk2.jpg";
+import Asset1 from "../assets/image/asset1.jpg";
+import Asset2 from "../assets/image/asset2.jpg";
+import IR1 from "../assets/image/ir1.jpg";
+import IR2 from "../assets/image/ir2.jpg";
+import Driver1 from "../assets/image/driver1.jpg";
+import Driver2 from "../assets/image/driver2.jpg";
+import Travel1 from "../assets/image/travel1.jpg";
+import Travel2 from "../assets/image/travel2.jpg";
+import Proc1 from "../assets/image/proc1.jpg";
+import Proc2 from "../assets/image/proc2.jpg";
+import Career1 from "../assets/image/career1.jpg";
+import Career2 from "../assets/image/career2.jpg";
 
 const Projects = () => {
   const allProjects = [
@@ -15,7 +44,7 @@ const Projects = () => {
       description:
         "Request IT support for hardware, software, and network issues.",
       images: [IT, IT2],
-      technologies: ["IT", "Support"],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -24,8 +53,8 @@ const Projects = () => {
       title: "Building Maintenance System",
       description:
         "Submit and manage building maintenance requests efficiently.",
-      image: "/path/to/building-maintenance-image.jpg",
-      technologies: ["Facilities", "Maintenance"],
+      images: [Building, Building2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -33,8 +62,8 @@ const Projects = () => {
     {
       title: "Inhouse Company Facilities Request System",
       description: "Manage material requests and facility purchases in-house.",
-      image: "/path/to/other-facilities-image.jpg",
-      technologies: ["Facilities", "Procurement"],
+      images: [Facilities1, Facilities2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -42,8 +71,8 @@ const Projects = () => {
     {
       title: "Stationary Request System - Stock In/Out",
       description: "Manage stationary stock and requests for office supplies.",
-      image: "/path/to/stationary-request-image.jpg",
-      technologies: ["Office Supplies"],
+      images: [ATK1, ATK2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -51,8 +80,8 @@ const Projects = () => {
     {
       title: "Courier Service - Sent and Received Package System",
       description: "Track and manage package delivery and receipt services.",
-      image: "/path/to/delivery-request-image.jpg",
-      technologies: ["Logistics"],
+      images: [Courier1, Courier2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -60,8 +89,8 @@ const Projects = () => {
     {
       title: "Asset Management System",
       description: "Track and manage company assets for efficient use.",
-      image: "/path/to/asset-management-image.jpg",
-      technologies: ["Logistics"],
+      images: [Asset1, Asset2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -69,8 +98,8 @@ const Projects = () => {
     {
       title: "Travel Business - Travel Request System",
       description: "Submit and manage travel requests for business trips.",
-      image: "/path/to/travel-request-image.jpg",
-      technologies: ["Logistics"],
+      images: [Travel1, Travel2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -78,8 +107,8 @@ const Projects = () => {
     {
       title: "Procurement - Purchase Request System",
       description: "Submit purchase requests and manage procurement processes.",
-      image: "/path/to/procurement-request-image.jpg",
-      technologies: ["Logistics"],
+      images: [Proc1, Proc2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -87,8 +116,8 @@ const Projects = () => {
     {
       title: "Career Screening Management System",
       description: "Manage and track career screening processes efficiently.",
-      image: "/path/to/career-screening-image.jpg",
-      technologies: ["Logistics"],
+      images: [Career1, Career2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -96,8 +125,8 @@ const Projects = () => {
     {
       title: "Industrial Relation - Live Chat",
       description: "Internal live chat system for complaints and grievances.",
-      image: "/path/to/industrial-relation-image.jpg",
-      technologies: ["Logistics"],
+      images: [IR1, IR2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -105,8 +134,8 @@ const Projects = () => {
     {
       title: "Internal Company Driver Booking System",
       description: "Book company drivers for official trips and transport.",
-      image: "/path/to/driver-booking-image.jpg",
-      technologies: ["Logistics"],
+      images: [Driver1, Driver2],
+      technologies: ["PHP", "MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -115,8 +144,8 @@ const Projects = () => {
       title: "PTSMS Data Management System",
       description:
         "Management system for client PTSMS to efficiently manage their internal database with this system and to ease internal employee management.",
-      image: "/path/to/ptsms-image.jpg",
-      technologies: ["Logistics"],
+      images: [PTSMS1, PTSMS2, PTSMS3],
+      technologies: ["React.js, Express.js, MySQL"],
       link: "",
       isInternal: true,
       isWeb: true,
@@ -124,7 +153,7 @@ const Projects = () => {
     {
       title: "Company Profile - CLA Legal Associate",
       description: "Company profile site for CLA Legal Associate.",
-      image: "/path/to/cla-legal-image.jpg",
+      images: [CLA1, CLA2],
       technologies: ["Vite.js", "React", "TailwindCSS", "Node.js"],
       link: "https://client-cla-indonesia.vercel.app/",
       isInternal: false,
@@ -133,7 +162,7 @@ const Projects = () => {
     {
       title: "Flora Care",
       description: "Marketplace focused on plant care services.",
-      image: "/path/to/public-project-image.jpg",
+      images: [Flora1, Flora2],
       technologies: ["React", "Node.js", "Tailwind CSS"],
       link: "https://floracare-khaled-makkawirelangs-projects.vercel.app/",
       isInternal: false,
@@ -141,7 +170,7 @@ const Projects = () => {
     {
       title: "Perfect Pallete",
       description: "An online makeup palette marketplace.",
-      image: "/path/to/public-project-image.jpg",
+      images: [Perfect1, Perfect2],
       technologies: ["React", "Node.js", "Tailwind CSS"],
       link: "https://client-perfect-pallete.vercel.app/",
       isInternal: false,
@@ -177,7 +206,7 @@ const Projects = () => {
       isInternal: false,
     },
 
-    // You can add more public projects here if needed
+    //Add more public projects here if needed
   ];
 
   const [filter, setFilter] = useState("All Projects");

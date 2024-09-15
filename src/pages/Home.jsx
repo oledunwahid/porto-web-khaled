@@ -22,7 +22,7 @@ const Home = () => {
       description: "Company Profile for Mineral Alam Abadi Group",
       images: [CPMAAImage1, CPMAAImage2],
       technologies: ["PHP", "Javascript", "Bootstrap 5", "MYSQL", "CSS"],
-      link: "https://maagroup.co.id/",
+      link: "https://mineralalamabadi.com/",
     },
   ];
 
