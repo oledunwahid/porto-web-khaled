@@ -92,7 +92,7 @@ const Hero = () => {
           }}
         >
           <motion.button
-            className="bg-gradient-to-r from-blue-500 to-violet-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg transition duration-300"
+            className="bg-gradient-to-r from-blue-500 to-violet-500 text-white font-bold lg:py-3 py-3 px-1 m-3 lg:px-8 rounded-full text-lg hover:shadow-lg transition duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
@@ -113,7 +113,7 @@ const Hero = () => {
             Explore My Work
           </motion.button>
           <motion.button
-            className="bg-white text-blue-500 font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg transition duration-300 "
+            className="bg-white text-blue-500 font-bold lg:py-3 lg:px-8 py-3 px-8 rounded-full m-3 text-lg hover:shadow-lg transition duration-300 "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
