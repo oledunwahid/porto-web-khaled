@@ -122,14 +122,14 @@ const Projects = () => {
   ];
 
   const [filter, setFilter] = useState("All Projects");
-  const categories = ["All Projects", "Public", "Internal", "Web", "UI/UX"];
+  const categories = ["All Projects", "Public", "Inhouse", "Web", "UI/UX"];
 
   const filteredProjects =
     filter === "All Projects"
       ? allProjects
       : filter === "Public"
       ? allProjects.filter((project) => !project.isInternal)
-      : filter === "Internal"
+      : filter === "Inhouse"
       ? allProjects.filter((project) => project.isInternal)
       : filter === "Web"
       ? allProjects.filter((project) => project.isWeb)

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import profile from "../../assets/image/profile-khaled.jpeg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -13,12 +14,17 @@ const Hero = () => {
     navigate("/projects");
   };
 
+  const handleOpenCV = () => {
+    // Add logic to open CV
+    window.open("/path-to-your-cv.pdf", "_blank");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative overflow-hidden"
+      className="relative overflow-hidden min-h-screen flex items-center"
     >
       <div className="absolute inset-0 z-0">
         {/* Animated background shapes */}
@@ -47,15 +53,27 @@ const Hero = () => {
           )
         )}
       </div>
-      <div className="relative z-10 py-20 text-center">
+      <div className="relative z-10 text-center mx-auto">
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <img
+            src={profile}
+            alt="Profile"
+            className="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg"
+          />
+        </motion.div>
         <motion.h1
           className="text-5xl lg:text-6xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
         >
           Hey, I&apos;m{" "}
-          <span className="text-transparent text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-blue-500 to-violet-200">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-violet-200">
             Khaled Makkawirelang
           </span>
         </motion.h1>
@@ -63,11 +81,12 @@ const Hero = () => {
           className="text-2xl mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
         >
           Full Stack Developer
         </motion.p>
         <motion.div
+          className="flex justify-center space-x-4"
           style={{
             perspective: 1000,
           }}
@@ -92,6 +111,27 @@ const Hero = () => {
             onClick={handleExplore}
           >
             Explore My Work
+          </motion.button>
+          <motion.button
+            className="bg-white text-blue-500 font-bold py-3 px-8 rounded-full text-lg hover:shadow-lg transition duration-300 "
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              rotateX: rotateX,
+              rotateY: rotateY,
+            }}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              x.set(e.clientX - rect.left - rect.width / 2);
+              y.set(e.clientY - rect.top - rect.height / 2);
+            }}
+            onMouseLeave={() => {
+              x.set(0);
+              y.set(0);
+            }}
+            onClick={handleOpenCV}
+          >
+            Open CV
           </motion.button>
         </motion.div>
       </div>
