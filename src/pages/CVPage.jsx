@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import cvPDF from "/src/assets/file/KHALED MAKKAWIRELANG-CV.pdf";
 
 const CVPage = () => {
   return (
@@ -14,7 +15,7 @@ const CVPage = () => {
       </h1>
       <div className="flex justify-center">
         <iframe
-          src="/src/assets/file/KHALED MAKKAWIRELANG-CV.pdf"
+          src={cvPDF}
           className="w-full h-[800px] border-2 border-gray-300 rounded-lg"
           title="CV PDF Viewer"
         />
