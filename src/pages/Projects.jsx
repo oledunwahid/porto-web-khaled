@@ -11,15 +11,6 @@ import IT2 from "../assets/image/it2.jpg";
 const Projects = () => {
   const allProjects = [
     {
-      title: "Public Project 1",
-      description:
-        "A brief overview of public project 1 using React and Node.js.",
-      image: "/path/to/project1-image.jpg",
-      technologies: ["React", "Node.js", "MongoDB"],
-      link: "https://project1.com",
-      isInternal: false,
-    },
-    {
       title: "IT Support System - Ticketing Request System",
       description:
         "Request IT support for hardware, software, and network issues.",
