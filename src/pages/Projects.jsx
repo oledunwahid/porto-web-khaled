@@ -12,17 +12,17 @@ const Projects = () => {
   const allProjects = [
     {
       title: "Public Project 1",
-      description: "A brief description of public project 1",
+      description:
+        "A brief overview of public project 1 using React and Node.js.",
       image: "/path/to/project1-image.jpg",
       technologies: ["React", "Node.js", "MongoDB"],
       link: "https://project1.com",
       isInternal: false,
     },
-
     {
-      title: "IT Support System",
+      title: "IT Support System - Ticketing Request System",
       description:
-        "IT-related issues here. Our IT team will assist you as soon as possible. (Additional or RAM Replacement, Drive or Cloud storage request, Email, Printer, Scan, Software problems etc).",
+        "Request IT support for hardware, software, and network issues.",
       images: [IT, IT2],
       technologies: ["IT", "Support"],
       link: "",
@@ -30,9 +30,9 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "Building Maintenance",
+      title: "Building Maintenance System",
       description:
-        "Submit building and facility-related maintenance requests here. Our team will assist you with building maintenance needs.",
+        "Submit and manage building maintenance requests efficiently.",
       image: "/path/to/building-maintenance-image.jpg",
       technologies: ["Facilities", "Maintenance"],
       link: "",
@@ -40,9 +40,8 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "Other Facilities Request",
-      description:
-        "For purchasing and replacing items, please attach the approved material request form and submit your request here.",
+      title: "Inhouse Company Facilities Request System",
+      description: "Manage material requests and facility purchases in-house.",
       image: "/path/to/other-facilities-image.jpg",
       technologies: ["Facilities", "Procurement"],
       link: "",
@@ -50,19 +49,8 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "Laptop Facilities Request",
-      description:
-        "For purchasing and replacing laptops, please attach the approved material request form and submit your request here.",
-      image: "/path/to/laptop-request-image.jpg",
-      technologies: ["IT", "Hardware"],
-      link: "",
-      isInternal: true,
-      isWeb: true,
-    },
-    {
-      title: "ATK/Stationary",
-      description:
-        "Submit your stationary-related requests here. Our team will assist you with ATK/Stationary needs.",
+      title: "Stationary Request System - Stock In/Out",
+      description: "Manage stationary stock and requests for office supplies.",
       image: "/path/to/stationary-request-image.jpg",
       technologies: ["Office Supplies"],
       link: "",
@@ -70,9 +58,8 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "Delivery",
-      description:
-        "Submit your delivery-related requests here. Our team will assist you with delivery needs.",
+      title: "Courier Service - Sent and Received Package System",
+      description: "Track and manage package delivery and receipt services.",
       image: "/path/to/delivery-request-image.jpg",
       technologies: ["Logistics"],
       link: "",
@@ -80,18 +67,98 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "Public Project Example",
+      title: "Asset Management System",
+      description: "Track and manage company assets for efficient use.",
+      image: "/path/to/asset-management-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Travel Business - Travel Request System",
+      description: "Submit and manage travel requests for business trips.",
+      image: "/path/to/travel-request-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Procurement - Purchase Request System",
+      description: "Submit purchase requests and manage procurement processes.",
+      image: "/path/to/procurement-request-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Career Screening Management System",
+      description: "Manage and track career screening processes efficiently.",
+      image: "/path/to/career-screening-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Industrial Relation - Live Chat",
+      description: "Internal live chat system for complaints and grievances.",
+      image: "/path/to/industrial-relation-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Internal Company Driver Booking System",
+      description: "Book company drivers for official trips and transport.",
+      image: "/path/to/driver-booking-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "PTSMS Data Management System",
       description:
-        "This is an example of a public project that would be visible and accessible to everyone.",
+        "Management system for client PTSMS to efficiently manage their internal database with this system and to ease internal employee management.",
+      image: "/path/to/ptsms-image.jpg",
+      technologies: ["Logistics"],
+      link: "",
+      isInternal: true,
+      isWeb: true,
+    },
+    {
+      title: "Company Profile - CLA Legal Associate",
+      description: "Company profile site for CLA Legal Associate.",
+      image: "/path/to/cla-legal-image.jpg",
+      technologies: ["Vite.js", "React", "TailwindCSS", "Node.js"],
+      link: "https://client-cla-indonesia.vercel.app/",
+      isInternal: false,
+      isWeb: true,
+    },
+    {
+      title: "Flora Care",
+      description: "Marketplace focused on plant care services.",
       image: "/path/to/public-project-image.jpg",
-      technologies: ["React", "Node.js", "MongoDB"],
-      link: "https://example-public-project.com",
+      technologies: ["React", "Node.js", "Tailwind CSS"],
+      link: "https://floracare-khaled-makkawirelangs-projects.vercel.app/",
       isInternal: false,
     },
     {
-      title: "Redesign University's Website ",
+      title: "Perfect Pallete",
+      description: "An online makeup palette marketplace.",
+      image: "/path/to/public-project-image.jpg",
+      technologies: ["React", "Node.js", "Tailwind CSS"],
+      link: "https://client-perfect-pallete.vercel.app/",
+      isInternal: false,
+    },
+    {
+      title: "Redesign University's Website",
       description:
-        "This is an example of a public project that would be visible and accessible to everyone.",
+        "UI/UX redesign for a university's website to improve user experience.",
       images: [Mercu, Mercu2],
       technologies: [
         "Figma",
@@ -99,14 +166,14 @@ const Projects = () => {
         "User Interface",
         "User Experience",
       ],
-      link: "https://www.figma.com/proto/WK1BK14lTqKFiXlpif8S53/Project-Redesign-Website-Mercu?page-id=0%3A1&node-id=60-640&scaling=scale-down&content-scaling=fixed&starting-point-node-id=60%3A640&t=wV2R4aowxCjvJBym-1",
+      link: "https://www.figma.com/proto/WK1BK14lTqKFiXlpif8S53/Project-Redesign-Website-Mercu",
       isUIUX: true,
       isInternal: false,
     },
     {
       title: "Travmate (Airbnb UI/UX Project)",
       description:
-        "UI/UX design with Airbnb category. Prepare hotel services, planes, travel, recreation areas and all kinds of your needs. This project was created to adapt the current user interface with a user experience that makes it easier for users.",
+        "UI/UX design for a travel and accommodation booking platform.",
       images: [Travmate, Travmate2],
       technologies: [
         "Figma",
@@ -114,10 +181,11 @@ const Projects = () => {
         "User Interface",
         "User Experience",
       ],
-      link: "https://www.figma.com/proto/JCUOF8bX1YGhuCiUOFntS5/Project?node-id=5-37&starting-point-node-id=5%3A2",
+      link: "https://www.figma.com/proto/JCUOF8bX1YGhuCiUOFntS5/Project",
       isUIUX: true,
       isInternal: false,
     },
+
     // You can add more public projects here if needed
   ];
 
