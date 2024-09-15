@@ -15,8 +15,7 @@ const Hero = () => {
   };
 
   const handleOpenCV = () => {
-    // Add logic to open CV
-    window.open("/path-to-your-cv.pdf", "_blank");
+    navigate("/cv");
   };
 
   return (

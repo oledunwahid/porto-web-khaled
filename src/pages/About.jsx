@@ -3,16 +3,39 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Work1 from "../assets/image/work1.jpg";
+import Work2 from "../assets/image/work2.jpg";
+import Work3 from "../assets/image/work3.jpg";
 
 const About = () => {
-  const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "PHP",
-    "SQL",
+  const hardSkills = [
+    "Foreign Language Proficiency",
+    "CSS",
+    "HTML",
+    "UI/UX Design",
+    "Web Development",
+    "XML",
+    "Database Design",
     "Git",
-    "Express.js",
+    "JavaScript",
+    "Figma",
+    "Technical Documentation",
+    "React.js",
+    "MySQL",
+    "Tailwind CSS",
+  ];
+
+  const softSkills = [
+    "Adaptive",
+    "Commitment",
+    "Problem Solving",
+    "Patience",
+    "Clear Communication",
+    "Goal-oriented",
+    "Timeliness",
+    "Listening",
+    "Curiosity",
+    "Project Management",
   ];
 
   const careerJourney = [
@@ -31,13 +54,8 @@ const About = () => {
     },
   ];
 
-  const photos = [
-    "/images/photo1.jpg",
-    "/images/photo2.jpg",
-    "/images/photo3.jpg",
-  ]; // Replace with actual paths of your photos
+  const photos = [Work1, Work2, Work3];
 
-  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
@@ -65,9 +83,9 @@ const About = () => {
         >
           <h2 className="text-2xl font-semibold mb-4">Who I Am</h2>
           <p className="text-gray-300 mb-4">
-            I'm a dedicated and adaptable full-stack developer with a passion
-            for continuous learning. In my role as a Junior Programmer, I
-            navigate both front-end and back-end challenges, always ready to
+            I&apos;m a dedicated and adaptable full-stack developer with a
+            passion for continuous learning. In my role as a Junior Programmer,
+            I navigate both front-end and back-end challenges, always ready to
             embrace new technologies and approaches.
           </p>
         </motion.div>
@@ -78,17 +96,35 @@ const About = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
         >
           <h2 className="text-2xl font-semibold mb-4">Skills & Expertise</h2>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill, index) => (
-              <motion.span
-                key={index}
-                className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {skill}
-              </motion.span>
-            ))}
+          <div className="mb-4">
+            <h3 className="text-xl font-semibold mb-2">Hard Skills</h3>
+            <div className="flex flex-wrap gap-2">
+              {hardSkills.map((skill, index) => (
+                <motion.span
+                  key={index}
+                  className="bg-gray-700 text-white px-3 py-1 rounded-full text-sm"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Soft Skills</h3>
+            <div className="flex flex-wrap gap-2">
+              {softSkills.map((skill, index) => (
+                <motion.span
+                  key={index}
+                  className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
