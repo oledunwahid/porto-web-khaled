@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Topbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = ["Home", "Projects", "About"];
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: "About", path: "/about" },
+    { name: "GitHub", path: "https://github.com/oledunwahid", external: true },
+    {
+      name: "LinkedIn",
+      path: "https://linkedin.com/in/khaled-makkawirelang-a29174236",
+      external: true,
+    },
+  ];
 
   const menuVariants = {
     closed: { opacity: 0, x: "100%" },
@@ -40,41 +51,74 @@ const Topbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            className="fixed top-0 right-0 bottom-0 w-64 bg-gray-900 text-white p-8"
+            className="fixed top-0 right-0 bottom-0 w-64 bg-gray-900 text-white p-8 flex flex-col justify-between"
             initial="closed"
             animate="open"
             exit="closed"
             variants={menuVariants}
           >
             <ul className="flex flex-col space-y-6 mt-16">
-              {menuItems.map((item) => (
-                <motion.li key={item} variants={itemVariants}>
-                  <Link
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="text-2xl transition duration-300 relative overflow-hidden block"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <motion.span
-                      className="relative z-10 block"
-                      whileHover={{
-                        color: "#2196f3", // Tailwind's pink-500
-                        transition: { duration: 0.2 },
-                      }}
+              {menuItems.map(({ name, path, external }) => (
+                <motion.li key={name} variants={itemVariants}>
+                  {external ? (
+                    <a
+                      href={path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-2xl transition duration-300 relative overflow-hidden block"
+                      onClick={() => setIsOpen(false)}
                     >
-                      {item}
-                    </motion.span>
-                    <motion.span
-                      className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{
-                        scaleX: 1,
-                        transition: { duration: 0.2 },
-                      }}
-                    />
-                  </Link>
+                      <motion.span
+                        className="relative z-10 block"
+                        whileHover={{
+                          color: "#2196f3",
+                          transition: { duration: 0.2 },
+                        }}
+                      >
+                        {name}
+                      </motion.span>
+                      <motion.span
+                        className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{
+                          scaleX: 1,
+                          transition: { duration: 0.2 },
+                        }}
+                      />
+                    </a>
+                  ) : (
+                    <Link
+                      to={path}
+                      className="text-2xl transition duration-300 relative overflow-hidden block"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <motion.span
+                        className="relative z-10 block"
+                        whileHover={{
+                          color: "#2196f3",
+                          transition: { duration: 0.2 },
+                        }}
+                      >
+                        {name}
+                      </motion.span>
+                      <motion.span
+                        className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{
+                          scaleX: 1,
+                          transition: { duration: 0.2 },
+                        }}
+                      />
+                    </Link>
+                  )}
                 </motion.li>
               ))}
             </ul>
+            <div className="mt-8 text-center mb-4">
+              <p className="text-sm text-gray-400">
+                &copy; 2024. All rights reserved.
+              </p>
+            </div>
           </motion.nav>
         )}
       </AnimatePresence>
