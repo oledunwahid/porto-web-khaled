@@ -3,7 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaExpand, FaTimes } from "react-icons/fa";
+import {
+  FaExpand,
+  FaTimes,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 
 const ProjectCard = ({
   title,
@@ -13,7 +18,7 @@ const ProjectCard = ({
   link,
   isInternal,
 }) => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
   const settings = {
     dots: true,
@@ -27,12 +32,24 @@ const ProjectCard = ({
     pauseOnHover: true,
   };
 
-  const openLightbox = (image) => {
-    setSelectedImage(image);
+  const openLightbox = (index) => {
+    setSelectedImageIndex(index);
   };
 
   const closeLightbox = () => {
-    setSelectedImage(null);
+    setSelectedImageIndex(null);
+  };
+
+  const nextImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setSelectedImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -49,11 +66,11 @@ const ProjectCard = ({
                 <img
                   src={image}
                   alt={`${title} - Image ${index + 1}`}
-                  className="w-full h-96 object-contain"
+                  className="w-full h-96 object-cover"
                 />
                 <div
                   className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-                  onClick={() => openLightbox(image)}
+                  onClick={() => openLightbox(index)}
                 >
                   <FaExpand className="text-white text-3xl" />
                 </div>
@@ -92,24 +109,24 @@ const ProjectCard = ({
       </div>
 
       <AnimatePresence>
-        {selectedImage && (
+        {selectedImageIndex !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
             onClick={closeLightbox}
           >
             <motion.div
-              className="relative max-w-4xl max-h-[90vh] w-full h-full"
+              className="relative max-w-7xl max-h-[90vh] w-full h-full"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={selectedImage}
-                alt="Enlarged project image"
+                src={images[selectedImageIndex]}
+                alt={`${title} - Enlarged Image`}
                 className="w-full h-full object-contain"
               />
               <button
@@ -118,6 +135,21 @@ const ProjectCard = ({
               >
                 <FaTimes className="text-2xl" />
               </button>
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition-all duration-300"
+              >
+                <FaChevronLeft className="text-2xl" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-75 transition-all duration-300"
+              >
+                <FaChevronRight className="text-2xl" />
+              </button>
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-full">
+                {selectedImageIndex + 1} / {images.length}
+              </div>
             </motion.div>
           </motion.div>
         )}
