@@ -39,6 +39,8 @@ import Career2 from "../assets/image/career2.jpg";
 import Sianti1 from "../assets/image/sianti1.jpg";
 import Sianti2 from "../assets/image/sianti2.jpg";
 import Sianti3 from "../assets/image/sianti3.jpg";
+import DDCImage1 from "../assets/image/dulux-design-competition-2025-resmi-dibuka.jpg";
+import DDCImage2 from "../assets/image/dulux-design-competition-2025-login.png";
 
 const Projects = () => {
   const allProjects = [
@@ -144,9 +146,9 @@ const Projects = () => {
       isWeb: true,
     },
     {
-      title: "PTSMS Data Management System",
+      title: "Healthcare Company Management System (HCMS)",
       description:
-        "Management system for client PTSMS to efficiently manage their internal database with this system and to ease internal employee management.",
+        "A comprehensive internal management system for a healthcare equipment company, streamlining operations and marketing efforts. The system integrates attendance tracking, transaction management, product management, supplier management, customer management, and employee management features, providing a 360-degree view of the business.",
       images: [PTSMS1, PTSMS2, PTSMS3],
       technologies: ["React.js, Express.js, MySQL"],
       link: "",
@@ -222,6 +224,17 @@ const Projects = () => {
       link: "https://www.figma.com/proto/JCUOF8bX1YGhuCiUOFntS5/Project",
       isUIUX: true,
       isInternal: false,
+    },
+    {
+      title: "Dulux Design Competition 2025",
+      description:
+        "As a Front-End Developer for the Dulux Design Competition 2025 platform, I was responsible for bringing the user interface to life using Next.js. I collaborated closely with the UI/UX team and the project manager to align design goals with technical execution. Throughout the development process, I contributed numerous interface improvements to enhance user experience, responsiveness, and overall visual consistency—ensuring a polished, intuitive, and engaging platform for designers and architects to showcase their work.",
+      images: [DDCImage1, DDCImage2],
+      technologies: ["Next.js", "React", "Tailwind CSS"],
+      link: "https://duluxdesigncompetition.com/home",
+      isUIUX: false,
+      isInternal: false,
+      isWeb: true,
     },
 
     //Add more public projects here if needed

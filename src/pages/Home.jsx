@@ -2,21 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import Hero from "../components/local/Hero";
 import ProjectCard from "../components/local/ProjectCard";
-import EIPImage1 from "../assets/image/eip.jpg";
-import EIPImage2 from "../assets/image/eip2.jpg";
+import DDCImage1 from "../assets/image/dulux-design-competition-2025-resmi-dibuka.jpg";
+import DDCImage2 from "../assets/image/dulux-design-competition-2025-login.png";
 import CPMAAImage1 from "../assets/image/cpmaa.jpg";
 import CPMAAImage2 from "../assets/image/cpmaa2.jpg";
 
 const Home = () => {
   const featuredProjects = [
     {
-      title: "Employee Information Portal",
+      title: "Dulux Design Competition 2025",
       description:
-        "The Employee Information Portal is a comprehensive company application designed to meet various internal needs. It serves as a centralized platform for essential functions such as IT ticketing, procurement purchase requests, stationary requests, and more. This portal is tailored to address the specific requirements of internal resources, ensuring streamlined operations and efficient management of company processes.",
-      images: [EIPImage1, EIPImage2],
-      technologies: ["PHP", "MYSQL"],
-      isInternal: true,
+        "As a Front-End Developer for the Dulux Design Competition 2025 platform, I was responsible for bringing the user interface to life using Next.js. I collaborated closely with the UI/UX team and the project manager to align design goals with technical execution. Throughout the development process, I contributed numerous interface improvements to enhance user experience, responsiveness, and overall visual consistency—ensuring a polished, intuitive, and engaging platform for designers and architects to showcase their work.",
+      images: [DDCImage1, DDCImage2],
+      technologies: ["Next.js", "React", "Tailwind CSS"],
+      link: "https://duluxdesigncompetition.com/home",
     },
+
     {
       title: "Company Profile Mineral Alam Abadi",
       description: "Company Profile for Mineral Alam Abadi Group",

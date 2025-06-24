@@ -82,7 +82,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
         >
-          Full Stack Developer
+          Front-End Developer
         </motion.p>
         <motion.div
           className="flex justify-center space-x-4"
